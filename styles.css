@@ -1,0 +1,229 @@
+@font-face {
+    font-family: 'EB Garamond';
+    src: url('files/EBGaramond.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    margin: 0;
+    font-family: 'EB Garamond', 'Garamond', 'Times New Roman', sans-serif;
+    color: #f4f4f4;
+    user-select: none;
+}
+
+.header{
+    background-color: #141414;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    color: #f4f4f4;
+    padding-left: 80px;
+    font-weight: normal;
+    z-index: 1000;
+    user-select: none;
+}
+
+.width-100{
+    width: 100%
+}
+
+.thumb-holder {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('img/thumb.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.thumb-holder img {
+    display: none;
+}
+
+.thumb-holder h1,
+.thumb-holder button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+
+.thumb-holder h1 {
+    top: 35%;
+    margin: 0;
+    margin-top: 70px;
+    font-size: 70px;
+}
+
+.thumb-holder button {
+    top: 55%;
+    padding: 10px 30px;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'EB Garamond', 'Garamond', 'Times New Roman', sans-serif;
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 100%;
+    word-break: break-word;
+}
+
+.store-section {
+    background-color: #f4f4f4;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.store-section h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 32px;
+}
+
+.store-holder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    width: 100%;
+}
+
+.store-card {
+    background: #f4f4f4;
+    border-radius: 15px;
+    padding: 15px;
+    flex: 1;
+    text-align: center;
+}
+
+.image-carousel {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin-bottom: 15px;
+}
+
+.image-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.carousel-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.carousel-image.active {
+    opacity: 1;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 2;
+    transition: background 0.3s ease;
+}
+
+.arrow:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+.sold-out-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background-color: #141414CC;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.sold-out-overlay[data-sold-out="true"] {
+    opacity: 1;
+}
+
+.product-name {
+    font-size: 18px;
+    margin: 10px 0 5px 0;
+    color: #333;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #141414;
+    margin: 0;
+}
+
+.footer {
+    background-color: #141414;
+    color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    font-family: 'EB Garamond', 'Garamond', 'Times New Roman', sans-serif;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 16px;
+}

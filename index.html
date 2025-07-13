@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arkin & Co.</title>
+    <link rel="icon" type="image/x-icon" href="img/AoC.ico">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1> Arkin & Co.</h1>
+    </div>
+    <div class="thumb-holder">
+        <img class="width-100" src="img/thumb.png">
+        <h1>Browse our latest products</h1>
+        <button onclick="scrollToStore()">Shop All</button>
+    </div>
+    <div class="store-section" id="store-section">
+        <h1>Shop Our Latest Products</h1>
+        <div class="store-holder">
+            <div class="store-card">
+                <div class="image-carousel">
+                    <button class="arrow left-arrow">‹</button>
+                    <div class="image-container">
+                        <img src="img/1.png" alt="Shirt 1" class="carousel-image active">
+                        <img src="img/2.png" alt="Shirt 1" class="carousel-image">
+                        <img src="img/3.png" alt="Shirt 1" class="carousel-image">
+                    </div>
+                    <button class="arrow right-arrow">›</button>
+                    <!-- Sold out -->
+                    <div class="sold-out-overlay" data-sold-out="false">Sold Out</div>
+                </div>
+                <h3 class="product-name">Classic White Tee</h3>
+                <p class="price">$29.99</p>
+            </div>
+
+            <div class="store-card">
+                <div class="image-carousel">
+                    <button class="arrow left-arrow">‹</button>
+                    <div class="image-container">
+                        <img src="img/4.png" alt="Shirt 2" class="carousel-image active">
+                        <img src="img/5.png" alt="Shirt 2" class="carousel-image">
+                        <img src="img/6.png" alt="Shirt 2" class="carousel-image">
+                    </div>
+                    <button class="arrow right-arrow">›</button>
+                    <!-- Sold out -->
+                    <div class="sold-out-overlay" data-sold-out="false">Sold Out</div>
+                </div>
+                <h3 class="product-name">Premium Cotton Shirt</h3>
+                <p class="price">$39.99</p>
+            </div>
+
+            <div class="store-card">
+                <div class="image-carousel">
+                    <button class="arrow left-arrow">‹</button>
+                    <div class="image-container">
+                        <img src="img/7.png" alt="Shirt 3" class="carousel-image active">
+                        <img src="img/8.png" alt="Shirt 3" class="carousel-image">
+                        <img src="img/9.png" alt="Shirt 3" class="carousel-image">
+                    </div>
+                    <button class="arrow right-arrow">›</button>
+                    <!-- Sold out -->
+                    <div class="sold-out-overlay" data-sold-out="false">Sold Out</div>
+                </div>
+                <h3 class="product-name">Designer Collection</h3>
+                <p class="price">$49.99</p>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Arkin & Co. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
