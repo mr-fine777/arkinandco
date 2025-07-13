@@ -44,3 +44,13 @@ function scrollToStore() {
         block: 'start'
     });
 } 
+
+// Parallax effect for .thumb-holder background (works on all devices)
+window.addEventListener('scroll', function() {
+    const thumbHolder = document.querySelector('.thumb-holder');
+    if (thumbHolder) {
+        // Adjust the multiplier for more/less parallax effect
+        const offset = window.pageYOffset * 0.5;
+        thumbHolder.style.backgroundPosition = `center ${offset}px`;
+    }
+}); 
