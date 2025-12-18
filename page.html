@@ -22,6 +22,7 @@
     position: relative;
     background: #000;
     border-radius: 6px;
+    z-index: 10;
   }
 
   .ad-wrapper iframe {
@@ -30,6 +31,7 @@
     border: none;
     transform: scaleX(0.83) scaleY(0.56);
     transform-origin: top left;
+    z-index: 20;
 
     /* 🔒 BLOCK ALL INTERACTION */
     pointer-events: none;
@@ -37,8 +39,10 @@
 
   .click-shield {
   position: absolute;
+  width: 250px;
+  height: 140px;
   inset: 0;
-  z-index: 10;
+  z-index: 990;
   background: transparent;
   cursor: default;
 }
