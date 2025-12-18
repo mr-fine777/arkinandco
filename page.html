@@ -4,38 +4,38 @@
   <meta charset="UTF-8">
   <title>Scaled Ad Example</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+  }
 
-  <style>
-    body {
-      background: #111;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      font-family: sans-serif;
-    }
+  .ad-wrapper {
+    width: 250px;
+    height: 140px;
+    overflow: hidden;
+    position: relative;
+    background: #000;
+    border-radius: 6px;
+  }
 
-    /* Final visible ad size */
-    .ad-wrapper {
-      width: 250px;
-      height: 140px;
-      overflow: hidden;
-      position: relative;
-      background: #000;
-      border-radius: 6px;
-    }
+  .ad-wrapper iframe {
+    width: 300px;
+    height: 250px;
+    border: none;
+    transform: scaleX(0.83) scaleY(0.56);
+    transform-origin: top left;
 
-    /* Scale the injected iframe */
-.ad-wrapper iframe {
-  width: 300px;
-  height: 250px;
-  border: none;
-  transform: scaleX(0.83) scaleY(0.56);
-  transform-origin: top left;
-}
+    /* 🔒 BLOCK ALL INTERACTION */
+    pointer-events: none;
+  }
+</style>
 
-  </style>
 </head>
 <body>
 
